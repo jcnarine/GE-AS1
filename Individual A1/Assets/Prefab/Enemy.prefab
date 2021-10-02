@@ -252,13 +252,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6643ba82ce9caf548b4668c4efec4e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4041437728789711621, guid: c25c1c32ac3356a469e50a4224f453e1, type: 3}
+  bulletPrefab: {fileID: 16972447658865228, guid: 629cbb860341f1a4e97241c61329045b, type: 3}
   bulletLocation: {fileID: 5296965361492989914}
   rb: {fileID: 4009379905161053577}
   speed: 15
   maxVelocity: 450
   lives: 2
-  shootTimer: 0.5
   minVelocity: 150
 --- !u!54 &4009379905161053577
 Rigidbody:

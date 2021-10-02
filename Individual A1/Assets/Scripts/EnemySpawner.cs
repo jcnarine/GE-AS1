@@ -51,17 +51,18 @@ public class EnemySpawner : MonoBehaviour
 
 		spawnLocation.x = pos__X;
 
-		Projectile asteroid = Instantiate(asteroidPrefab, spawnLocation, Quaternion.identity);
-		int randomScale = Random.Range(min_Size, max_Size);
-		asteroid.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
-		Invoke("SpawnEnemies", spawnTimer);
-		//if (Random.Range(0, 2) > 0)
-		//    {
-		//    Instantiate(asteroid, spawnLocation, Quaternion.identity);
-		//    }
-		//else{
-		//    Instantiate(enemyPrefab, spawnLocation, Quaternion.Euler(0f, -90f, 90f));
-		//    }
+		if (Random.Range(0, 2) > 0)
+			{
+			Projectile asteroid = Instantiate(asteroidPrefab, spawnLocation, Quaternion.identity);
+			int randomScale = Random.Range(min_Size, max_Size);
+			asteroid.transform.localScale = new Vector3(randomScale, randomScale, randomScale);
+			Invoke("SpawnEnemies", spawnTimer);
+			}
+		else
+			{
+			Instantiate(enemyPrefab, spawnLocation, Quaternion.Euler(0f, -90f, 90f));
+			Invoke("SpawnEnemies", spawnTimer);
+			}
 		}
 	}
 

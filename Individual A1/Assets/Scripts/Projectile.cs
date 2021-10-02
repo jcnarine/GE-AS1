@@ -36,8 +36,8 @@ public class Projectile : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 		{
-		if (this.gameObject.CompareTag("Asteroid") && other.gameObject.CompareTag("Asteroid")) { return; }
-		if (this.gameObject.CompareTag("PlayerBullet")|| this.gameObject.CompareTag("EnemyBullet"))
+		if (this.gameObject.CompareTag("Asteroid") && other.gameObject.CompareTag("Asteroid")|| other.gameObject.CompareTag("TopBoundary")) { return; }
+		if (this.gameObject.CompareTag("PlayerBullet"))
 			{
 			this.destroyed.Invoke();
 			}
