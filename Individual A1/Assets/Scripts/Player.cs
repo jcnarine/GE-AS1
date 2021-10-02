@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : Spaceship
 	{
@@ -49,6 +50,9 @@ public class Player : Spaceship
 		if (other.gameObject.tag == "Asteroid"|| other.gameObject.tag == "Enemy")
 			{
 			lives -= 1;
+			if (lives==0) {
+				SceneManager.LoadScene("YouLose");
+				}
 			livesText.text = "Lives: " + lives;
 			}
 		if (other.gameObject.tag == "Boundary")

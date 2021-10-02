@@ -38,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
 			  Invoke("nextWave", waveTimer);
 			}
 		else
-			{/*SceneManager.LoadScene(sceneName);*/}
+			{SceneManager.LoadScene("YouWon");}
 		}
 
 	void SpawnEnemies()
