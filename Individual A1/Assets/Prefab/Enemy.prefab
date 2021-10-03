@@ -257,7 +257,7 @@ MonoBehaviour:
   rb: {fileID: 4009379905161053577}
   speed: 15
   maxVelocity: 450
-  lives: 2
+  lives: 1
   minVelocity: 150
 --- !u!54 &4009379905161053577
 Rigidbody:
